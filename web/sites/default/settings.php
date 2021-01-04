@@ -88,7 +88,16 @@
  * ];
  * @endcode
  */
-$databases = [];
+$databases['default']['default'] = [
+  'database' => 'drupal8',
+  'username' => 'drupal8',
+  'password' => 'drupal8',
+  'host' => 'database',
+  'port' => '3306',
+  'driver' => 'mysql',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
+];
 
 /**
  * Customizing database settings.
@@ -261,7 +270,7 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+$settings['config_sync_directory'] = 'sites/default/config';
 
 /**
  * Settings:
@@ -290,7 +299,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = '2iyXsUAGRFS_KelWstQt7t4t9BNpprFBTguqEU8j6W7aHMLSGwvwvXmYXWv5KQxpnXwdysxsoA';
 
 /**
  * Deployment identifier.
@@ -795,3 +804,5 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+
+$settings['config_sync_directory'] = 'sites/default/files/config_t3X7fryeIAbJldiaNdBJn83P18Us2V4bZh9HYHIzPV6QtIlu0WIY4JIbuZmKvsgx0fwvJymK8w/sync';

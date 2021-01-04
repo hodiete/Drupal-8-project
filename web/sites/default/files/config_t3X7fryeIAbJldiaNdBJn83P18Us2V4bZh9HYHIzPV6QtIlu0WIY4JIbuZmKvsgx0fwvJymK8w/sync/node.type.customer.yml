@@ -1,0 +1,17 @@
+uuid: 48fe6499-8ec6-4cdf-a9cd-dccd7841c35e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Customer
+type: customer
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

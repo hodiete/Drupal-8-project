@@ -1,0 +1,28 @@
+uuid: 256ff708-a2a9-4e6c-8a6b-587144e4cc95
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.customer.feeds_item
+    - field.field.node.customer.field_balance
+    - field.field.node.customer.field_customer_id
+    - field.field.node.customer.field_customer_name
+    - node.type.customer
+  module:
+    - user
+id: node.customer.teaser
+targetEntityType: node
+bundle: customer
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_balance: true
+  field_customer_id: true
+  field_customer_name: true
