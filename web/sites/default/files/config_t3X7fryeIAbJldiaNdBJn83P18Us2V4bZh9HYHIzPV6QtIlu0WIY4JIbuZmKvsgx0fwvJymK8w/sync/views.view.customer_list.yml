@@ -299,6 +299,26 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_balance'
+  customer__list_all:
+    display_plugin: page
+    id: customer__list_all
+    display_title: 'Page 2'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      path: customerlists
+      arguments: {  }
+      defaults:
+        arguments: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_balance'
   page_1:
     display_plugin: page
     id: page_1
