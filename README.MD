@@ -12,7 +12,7 @@ HOW TO SETUP
 Things Done
 ---------------------
 * Drupal 8 Project created using composer
-* Customer content  type created containing fields balance, customer name, id
+* Created Content Entity Custom Module called `customer_entity` which contains a contains the fields i.e. balance, customer name, id
 * View created that contains a page to show list of customers  `/customerlists/`and a page that filters by the customer id, i.e. a customer with id=1 will be shown at `/customerlists/1`
 * Rest UI installed using composer and enabled, RestFul web services enabled, serialization enabled. RestUi provides a convenient interface to enable REST ENDPOINTS. REST enable for content to PUT, PATCH, DELETE, GET, POST
 * Feeds installed using composer, Feed type created which allows csv files to be parsed on every 1hour cron run for customer content type.
