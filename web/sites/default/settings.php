@@ -270,7 +270,7 @@ $databases['default']['default'] = [
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-$settings['config_sync_directory'] = 'sites/default/config';
+$settings['config_sync_directory'] = '../config/sync';
 
 /**
  * Settings:
@@ -804,5 +804,3 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-
-$settings['config_sync_directory'] = 'sites/default/files/config_t3X7fryeIAbJldiaNdBJn83P18Us2V4bZh9HYHIzPV6QtIlu0WIY4JIbuZmKvsgx0fwvJymK8w/sync';
