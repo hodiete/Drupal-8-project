@@ -2,3 +2,10 @@ name: drupal-8-project
 recipe: drupal8
 config:
   webroot: web
+
+
+tooling:
+  drupal:
+    service: appserver
+    cmd:
+     - /app/vendor/bin/drupal
