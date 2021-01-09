@@ -49,7 +49,7 @@ use Drupal\user\UserInterface;
  *     "id" = "id",
  *     "revision" = "vid",
  *     "bundle" = "type",
- *     "label" = "name",
+ *     "label" = "customer_name",
  *     "uuid" = "uuid",
  *     "uid" = "user_id",
  *     "langcode" = "langcode",
@@ -218,10 +218,27 @@ class CustomerEntity extends EditorialContentEntityBase implements CustomerEntit
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
+     
+     
+    $fields['customer_id'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('Customer id'))
+      ->setDescription(t('The ID of the customer'))
+      ->setRevisionable(TRUE)
+       -> setDisplayOptions('form', [
+        'type' => 'number',
+         'weight' => -4,
+      ])
+      -> setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'default_formatter',
+        'weight' => -4
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
 
-    $fields['name'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Customers entity.'))
+    $fields['customer_name'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Customer name'))
+      ->setDescription(t('The name of the customer'))
       ->setRevisionable(TRUE)
       ->setSettings([
         'max_length' => 50,
@@ -240,6 +257,22 @@ class CustomerEntity extends EditorialContentEntityBase implements CustomerEntit
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(TRUE);
+
+    $fields['customer_balance'] = BaseFieldDefinition::create('float')
+      ->setLabel(t('Balance'))
+      ->setDescription(t('Customer balance'))
+      ->setRevisionable(TRUE)
+          -> setDisplayOptions('form', [
+        'type' => 'number',
+         'weight' => -4,
+      ])
+      -> setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'default_formatter',
+        'weight' => -4,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
 
     $fields['status']->setDescription(t('A boolean indicating whether the Customers is published.'))
       ->setDisplayOptions('form', [

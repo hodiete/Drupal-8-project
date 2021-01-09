@@ -10,7 +10,7 @@ entity.customer_entity.collection:
 
 # Customers type menu items definition
 entity.customer_entity_type.collection:
-  title: 'Customers type'
+  title: 'Customers'
   route_name: entity.customer_entity_type.collection
   description: 'List Customers type (bundles)'
   parent: system.admin_structure

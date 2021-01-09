@@ -23,16 +23,6 @@ function customers_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
-/**
- * Implements hook_theme().
- */
-function customers_theme() {
-  return [
-    'customers' => [
-      'render element' => 'children',
-    ],
-  ];
-}
 
 /**
  * Implements hook_theme().
