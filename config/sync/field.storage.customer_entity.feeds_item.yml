@@ -1,13 +1,13 @@
-uuid: 85eab18c-1b5f-4c86-bb56-54506e7934d1
+uuid: 77c51086-5180-4ef6-b6ec-8c362a46bc0e
 langcode: en
 status: true
 dependencies:
   module:
+    - customers
     - feeds
-    - node
-id: node.feeds_item
+id: customer_entity.feeds_item
 field_name: feeds_item
-entity_type: node
+entity_type: customer_entity
 type: feeds_item
 settings:
   target_type: feeds_feed

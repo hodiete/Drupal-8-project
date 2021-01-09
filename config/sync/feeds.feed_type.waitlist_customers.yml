@@ -1,0 +1,66 @@
+uuid: 9cb2ac04-a05f-4364-ae8a-b1350c23ea05
+langcode: en
+status: true
+dependencies:
+  config:
+    - customers.customer_entity_type.waitlist_customers
+  module:
+    - customers
+id: waitlist_customers
+label: 'Waitlist Customers'
+description: 'A list of waitlist customers'
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:customer_entity'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: waitlist_customers
+custom_sources:
+  balance:
+    label: balance
+    value: balance
+    machine_name: balance
+  id:
+    label: id
+    value: id
+    machine_name: id
+  name:
+    label: name
+    value: name
+    machine_name: name
+mappings:
+  -
+    target: customer_balance
+    map:
+      value: balance
+    settings: {  }
+  -
+    target: customer_id
+    map:
+      value: id
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: customer_name
+    map:
+      value: name
+    unique: {  }
+    settings: {  }

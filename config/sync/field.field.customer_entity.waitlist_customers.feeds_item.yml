@@ -1,16 +1,16 @@
-uuid: 0ef015ee-f2d3-4c9a-b34d-7c41e55007f7
+uuid: 7c83b12f-ba82-43b0-a684-07796a7be4f3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.feeds_item
-    - node.type.customer
+    - customers.customer_entity_type.waitlist_customers
+    - field.storage.customer_entity.feeds_item
   module:
     - feeds
-id: node.customer.feeds_item
+id: customer_entity.waitlist_customers.feeds_item
 field_name: feeds_item
-entity_type: node
-bundle: customer
+entity_type: customer_entity
+bundle: waitlist_customers
 label: 'Feeds item'
 description: ''
 required: false
