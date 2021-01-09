@@ -1,0 +1,33 @@
+add customers entities:
+  title: 'Create new Customers entities'
+
+administer customers entities:
+  title: 'Administer Customers entities'
+  description: 'Allow to access the administration form to configure Customers entities.'
+  restrict access: true
+
+delete customers entities:
+  title: 'Delete Customers entities'
+
+edit customers entities:
+  title: 'Edit Customers entities'
+
+view published customers entities:
+  title: 'View published Customers entities'
+
+view unpublished customers entities:
+  title: 'View unpublished Customers entities'
+
+view all customers revisions:
+  title: 'View all Customers revisions'
+
+revert all customers revisions:
+  title: 'Revert all Customers revisions'
+  description: 'Role requires permission <em>view Customers revisions</em> and <em>edit rights</em> for customers entities in question or <em>administer customers entities</em>.'
+
+delete all customers revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Customers revisions</em> and <em>delete rights</em> for customers entities in question or <em>administer customers entities</em>.'
+
+permission_callbacks:
+  - \Drupal\customers\CustomerEntityPermissions::generatePermissions

@@ -1,0 +1,13 @@
+{
+    "name": "customers",
+    "type": "drupal-module",
+    "description": "Custom Entity For Customers",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/customers",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/customers",
+        "source": "http://cgit.drupalcode.org/customers",
+    },
+}

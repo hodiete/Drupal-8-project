@@ -1,0 +1,10 @@
+entity.customer_entity.add_form:
+  route_name: entity.customer_entity.add_page
+  title: 'Add Customers'
+  appears_on:
+    - entity.customer_entity.collection
+entity.customer_entity_type.add_form:
+  route_name: entity.customer_entity_type.add_form
+  title: 'Add Customers type'
+  appears_on:
+    - entity.customer_entity_type.collection
