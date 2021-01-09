@@ -1,0 +1,21 @@
+uuid: 10f07fbf-a689-4dd6-9a94-d48f317bc9e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - customer_entity
+    - serialization
+    - user
+id: entity.customer_entities
+plugin_id: 'entity:customer_entities'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - cookie

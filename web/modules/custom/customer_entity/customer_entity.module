@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains customer_entity.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function customer_entity_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the customer_entity module.
+    case 'help.page.customer_entity':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function customer_entity_theme() {
+  return [
+    'customer_entity' => [
+      'render element' => 'children',
+    ],
+  ];
+}

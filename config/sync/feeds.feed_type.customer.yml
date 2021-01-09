@@ -1,0 +1,63 @@
+uuid: e7dd8627-7207-431e-852a-f77927841e3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - customer_entity
+id: customer
+label: Customer
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:customer_entities'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values: {  }
+custom_sources:
+  id:
+    label: id
+    value: id
+    machine_name: id
+  balance:
+    label: balance
+    value: balance
+    machine_name: balance
+  name:
+    label: name
+    value: name
+    machine_name: name
+mappings:
+  -
+    target: customer_id
+    map:
+      value: id
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: customer_balance
+    map:
+      value: balance
+    settings: {  }
+  -
+    target: customer_name
+    map:
+      value: name
+    unique: {  }
+    settings: {  }

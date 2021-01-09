@@ -1,0 +1,23 @@
+uuid: f684e8dc-d5af-4ad8-9d36-aa165fc8de9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.customer_entities.feeds_item
+  module:
+    - customer_entity
+    - feeds
+id: customer_entities.customer_entities.feeds_item
+field_name: feeds_item
+entity_type: customer_entities
+bundle: customer_entities
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

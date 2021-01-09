@@ -1,6 +1,0 @@
-uuid: c9cbb27b-30e6-40bf-8a5f-238c67005f97
-langcode: en
-status: true
-dependencies: {  }
-id: waitlist_customers
-label: 'Waitlist Customers'

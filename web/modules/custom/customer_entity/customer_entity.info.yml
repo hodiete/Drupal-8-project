@@ -1,0 +1,5 @@
+name: 'Customer Entity'
+type: module
+description: 'Entity for Customers'
+core: 8.x
+package: 'Custom'
